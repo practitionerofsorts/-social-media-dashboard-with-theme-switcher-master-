@@ -1,0 +1,56 @@
+:root{
+    /* #### Dark Theme */
+    --Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+    --Very-Dark-Blue-TopBGPattern: hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue-CardBG: hsl(228, 28%, 20%);
+    --Desaturated-Blue-Text: hsl(228, 34%, 66%);
+    --White-Text: hsl(0, 0%, 100%);
+    --DarkToggle: linear gradient hsl(210, 78%, 56%), hsl(146, 68%, 55%);
+
+    --margin: 2%;
+    --overview-card-padding: 2.5em;
+    --today-card-padding: 1.5em;
+    
+    --icons-gap: .3em;
+    --border-radius: 5px;
+
+    --fs-1: 2.5rem;
+    --fs-2: 3.9rem;
+}
+body.active{
+    background-color: var(--Very-Dark-Blue-BG);
+}
+body.active h1,h2,h3,h4,h5,h6{
+    color: var(--White-Text);
+}
+body.active header p{
+    color: var(--Desaturated-Blue-Text);
+}
+body.active .toggle-case{
+    background-color: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+body.active .toggle-button{
+   background-color: var(--Very-Dark-Blue-BG);
+}
+body.active .overview-card{
+    background-color: var(--Dark-Desaturated-Blue-CardBG);
+}
+body.active .overview-card-name p{
+    color: var(--Desaturated-Blue-Text)
+}
+body.active .followers-text{
+    color: var(--Desaturated-Blue-Text);
+}
+body.active .today-card{
+    background-color: var(--Dark-Desaturated-Blue-CardBG);
+}
+body.active .today-card:hover{
+    background-color: hsla(228, 34%, 66%,.4);
+}
+body.active .first-row p{
+    color: var(--Desaturated-Blue-Text);
+}
+body.active .attribution {
+    color: var(--Desaturated-Blue-Text);
+}
+body.active .attribution a { color: hsl(0, 0%, 100%); }

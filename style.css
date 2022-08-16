@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+:root{
+    /* ### Primary */
+    --Lime-Green: hsl(163, 72%, 41%);
+    --Bright-Red: hsl(356, 69%, 56%);
+
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --YouTube: hsl(348, 97%, 39%);
+
+    /* #### Dark Theme */
+    --Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+    --Very-Dark-Blue-TopBGPattern: hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue-CardBG: hsl(228, 28%, 20%);
+    --Desaturated-Blue-Text: hsl(228, 34%, 66%);
+    --White-Text: hsl(0, 0%, 100%);
+
+
+    /* #### LightTheme   */
+    --White-BG: hsl(0, 0%, 100%);
+    --Very-Pale-Blue-TopBGPattern: hsl(225, 100%, 98%);
+    --Light-Grayish-Blue-CardBG: hsla(227, 47%, 96%, .5);
+    --Dark-Grayish-BlueText: hsl(228, 12%, 44%);
+    --Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+
+    /* Toggle */
+    --LightToggle: hsl(230, 22%, 74%);
+    --DarkToggle: linear gradient hsl(210, 78%, 56%), hsl(146, 68%, 55%);
+
+    --margin: 2%;
+    --overview-card-padding: 2.5em;
+    --today-card-padding: 1.5em;
+    
+    --icons-gap: .3em;
+    --border-radius: 5px;
+
+    --fs-1: 2.5rem;
+    --fs-2: 3.9rem;
+}
+.overview-card, .today-card{
+    cursor: pointer;
+}
+.whole-container{
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5em 0 3em;
+}
+.header-title{
+    color: var( --Very-Dark-Blue-Text);
+}
+header p{
+    color: var(--Dark-Grayish-BlueText);
+    font-size: 18px;
+}
+.toggle{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: space-between;
+    width: auto;
+}
+.toggle-case{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 4em;
+    height: 2em;
+    border-radius: 29px;
+    background: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%) );
+}
+.toggle-button{
+    background-color: white;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 .3em;
+    cursor: pointer;
+}
+.overview{
+    margin-bottom: 4em;
+}
+.overview-card-container{
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+}
+.overview-card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    padding: var(--overview-card-padding) 0;
+    background-color: var(--Light-Grayish-Blue-CardBG);
+}
+.overview-card-name{
+    display: flex;
+    margin-bottom: 1em;
+    gap: .5em;
+    color: var(--Dark-Grayish-BlueText);
+}
+.followers-amount{
+    color: var( --Very-Dark-Blue-Text);
+    font-size: var(--fs-2);
+}
+.followers-text{
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: var(--Dark-Grayish-BlueText);
+}
+.overview-changes{
+    display: flex;
+    gap: var(--icons-gap);
+    align-items: center;
+}
+.facebook{
+    border-top: 4px solid var(--Facebook);
+}
+.facebook:hover{
+    transition: .5s ease;
+    background: 
+    linear-gradient(to right, rgb(62, 64, 87), rgb(25, 4, 145)) border-box;
+  border-radius: 50em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top: 4px solid transparent;
+}
+.twitter{
+    border-top: 4px solid var(--Twitter);
+}
+.twitter:hover{
+    background: 
+    linear-gradient(to right, rgb(28, 28, 231), rgb(25, 4, 145)) border-box;
+  border-radius: 50em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top: 4px solid transparent;
+  transition: .5s ease;
+}
+.instagram{
+    border-top-style: solid;
+    border-width: 5px;
+    border-image: linear-gradient(to right,hsl(37, 97%, 70%),hsl(329, 70%, 58%)) 1;
+  
+}
+.instagram:hover{
+  background: linear-gradient(to right,hsl(37, 97%, 70%),hsl(329, 70%, 58%)) border-box;
+  border-radius: 50em;
+  border-radius: 50em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top: 4px solid transparent;
+  transition: .5s ease;
+}
+.youtube{
+    border-top: 4px solid var(--YouTube);
+}
+.youtube:hover{
+  background: 
+  linear-gradient(to right, rgb(139, 0, 0), rgb(81, 15, 2)) border-box;
+  border-radius: 50em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top: 4px solid transparent;
+  transition: .5s ease;
+}
+.green{
+    color: var(--Lime-Green);
+}
+.red{
+    color: var(--Bright-Red);
+}
+.today{
+    margin-bottom: 1em;
+}
+.today header{
+    margin: 0 0 1.5em;
+}
+.today header h1{
+    color: var(--Dark-Grayish-BlueText);
+}
+.today-cards-container{
+    gap: 1em;
+    display: grid;
+    border-radius: var(--border-radius);
+    grid-template-columns: repeat(4, 1fr);
+}
+.today-card{
+    height: 9em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: var(--today-card-padding);
+    border-radius: var(--border-radius);
+    background-color: var(--Light-Grayish-Blue-CardBG);
+}
+.today-card:hover{
+    background-color: hsla(228, 34%, 66%, .3);
+}
+.space-between, .first-row{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+}
+.first-row{
+    margin-bottom: auto;
+}
+.first-row p{
+    color: var(--Dark-Grayish-BlueText);
+}
+.second-row h1{
+    color: var( --Very-Dark-Blue-Text);
+}
+.second-row h1{
+    font-size: var(--fs-1);
+}
+.second-row p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--icons-gap);
+}
+/* font weight 500, i forgot to add it, its scary what hunger can do to the human mind */
+
+.header-text, .toggle p, .overview-card-name p, .first-row p{
+    font-weight: 700;
+}
+@media (min-width: 1300px){
+    .whole-container{
+        width: 80%;
+        margin-top: 2em;
+    }
+}
+@media (max-width: 900px){
+    .whole-container{
+        width: 88%;
+    }
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 3em 0;
+        width: 100%;
+    }
+    .toggle{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .header-title{
+        font-size: 14px;
+        margin-bottom: 1.5em;
+    }
+    .header-text{
+        width: 100%;
+        border-bottom: 2px solid black;
+    }
+    .header-text p{
+        margin-bottom: 1em;
+        font-size: 18px;
+    }
+    .toggle{
+        margin-top: 1em;
+    }
+    .overview-card-container, .today-cards-container{
+        grid-template-columns: repeat(2, minmax(20px, 1fr));
+    }
+}
+@media (min-width:500px) and (max-width: 900px){
+    .facebook:hover, .twitter:hover{
+      border-radius: 50em;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+}
+@media (max-width: 500px){
+    .overview-card-container, .today-cards-container{
+        grid-template-columns: repeat(1, minmax(20px, 1fr));
+    }
+    .facebook:hover, .instagram:hover{
+        border-radius: 50em;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+}
+.attribution { font-size: 11px; text-align: center; color: var( --Very-Dark-Blue-Text);}
+.attribution a { color: hsl(228, 45%, 44%); }

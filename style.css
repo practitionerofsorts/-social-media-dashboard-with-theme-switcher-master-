@@ -50,10 +50,17 @@
 .overview-card, .today-card{
     cursor: pointer;
 }
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .whole-container{
     width: 95%;
     max-width: 1200px;
-    margin: auto;
+ 
 }
 header{
     display: flex;
